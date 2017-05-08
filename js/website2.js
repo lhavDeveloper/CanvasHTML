@@ -14,7 +14,7 @@ var lamp2;
 var shapes = [];
 
 var selectedElement;
-var selectedShape = '';
+var selectedShape = 'square';
 var currentShape;
 
 var drawEnabled = 0;
@@ -24,6 +24,7 @@ var mousedownPosition = {
 };
 //variable responsible for checking mouse drag
 var mouseDrag = 0;
+var mouseDrag2 = false;
 
 /*
  * The following function is called on page load.
@@ -44,6 +45,7 @@ function init() {
   canvas.addEventListener('mousemove', function(e) {
     //checks if mouse is being dragged
     if (mouseDrag == 1) {
+      mouseDrag2 = true;
       ctx.clearRect(0, 0, 800, 500);
       paintCanvas();
       currentShape.width = e.offsetX - currentShape.startPosition.x;
@@ -53,9 +55,11 @@ function init() {
   });
 
   document.addEventListener('mouseup', function(e) {
+    mouseDrag = 0;
+
     //checks if mouse has been release after mouse drag
-    if (mouseDrag == 1) {
-      mouseDrag = 0;
+    if (mouseDrag2 == true) {
+      mouseDrag2 = false;
       Shapes.objects.push(currentShape);
     }
   });
@@ -98,6 +102,7 @@ function paintCanvas() {
   lamp2.drawfunction(ctx);
 
   //calls functions for drawing any shapes that the user might have drawn during the session
+  console.log(Shapes.objects);
   if (Shapes.objects.length) {
     for (var i = 0; i < Shapes.objects.length; i++)
       (Shapes.objects[i]).drawfunction(ctx);
