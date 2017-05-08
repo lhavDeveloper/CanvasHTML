@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website 1</title>
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/website1.js"></script>
+
+</head>
+<body onload="init()">
+    
+    <!-- header containing links to the 2 website pages-->
+    <header>
+        <a href="website1.html">Website 1</a>
+        <a href="website2.html">Website 2</a>
+    </header>
+
+    <!-- information that is received from the prompts on page load-->
+    <div>
+        <h2>Event Title : <span id="event_title"></span></h2>
+        <h2>Event Date : <span id="event_date"></span></h2>
+    </div>
+
+    <!-- Video -->
+    <video controls> 
+     <source src=http://techslides.com/demos/sample-videos/small.webm type=video/webm> 
+     <source src=http://techslides.com/demos/sample-videos/small.ogv type=video/ogg> 
+     <source src=http://techslides.com/demos/sample-videos/small.mp4 type=video/mp4>
+     <source src=http://techslides.com/demos/sample-videos/small.3gp type=video/3gp>
+     Your browser does not support the video tag
+    </video>
+
+    <!-- Video from youtube linked below-->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Rt0oX-4Hbxc" allowfullscreen></iframe>
+
+    <!-- audio from media folder linked below -->
+    <audio controls id="backgroundAudio">
+    <source src="media/music.mp3" type="audio/mpeg">
+    <source src="media/music.wav" type="audio/wav">
+    Your browser does not support the audio tag.
+    </audio>
+
+</body>
+</html>

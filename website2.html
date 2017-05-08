@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website 2</title>
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/website2.js"></script>
+</head>
+<body onload="init()">
+    
+    <!-- header containing links to the 2 website pages-->
+    <header>
+        <a href="website1.html">Website 1</a>
+        <a href="website2.html">Website 2</a>
+    </header>
+
+    <!-- Section at the top of the canvas where user can select some basic shapes-->
+    <div id="paintBox">
+        <button class="shapeButtons" onclick="selectShape('square')"><img src="images/square.jpg" alt="square"/></button>
+        <button class="shapeButtons" onclick="selectShape('circle')"><img src="images/circle.jpg" alt="circle"/></button>
+        <button class="shapeButtons" onclick="selectShape('triangle')"><img src="images/triangle.jpg" alt="triangle"/></button>
+        <input type="color" id="shapeColor_picker" value="#4B0082">
+    </div>
+    
+    <!-- The box which appears on clicking the lamp shade-->
+    <div id="controlBox">
+    <input type="color" id="color_picker" value="#4B0082" onchange="changeColor()">
+    <br>
+    <button id="leftButton">Left</button>
+    <button id="rightButton">Right</button>
+    </div>
+
+    <!-- html canvas drawing of two lamps on a table -->
+    <canvas id="lampCanvas" class="container" height="500" width="800">
+    </canvas>
+
+    <img src="images/wooden.png" alt="table" id="patternBg" width="30" height="30">
+
+</body>
+</html>

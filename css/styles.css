@@ -1,0 +1,72 @@
+/*
+ * This stylesheet is shared between website1.html and website2.html
+*/
+
+/*common styles for entire document*/
+html,body{
+    background-color: #00c4cc;
+    height: 100%;
+    min-width : 1200px;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+header{
+    padding: 10px;
+    background-color: #3f4652;
+}
+
+a{
+    color: white;
+    margin-right: 30px;
+}
+
+audio,
+video{
+    display: block;
+}
+
+/* styles for website2.html start here*/
+
+.container{
+    margin-left: 10%;
+    border: solid 1px black;
+}
+
+#paintBox{
+    margin-top:30px;
+    margin-left: 10%;
+    width: 800px;
+}
+
+#lampCanvas{
+    background-color: #FCFBE3;
+}
+
+#controlBox{
+    display: none;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+#shapeColor_picker{
+    height: 43px;
+}
+
+#patternBg{
+    display: none;
+}
+
+.shapeButtons > img{
+    height: 35px;
+    width: 40px;
+}
+
+.shapeButtons:focus{
+    background-color: #212121;
+}
